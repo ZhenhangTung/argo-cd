@@ -9,7 +9,7 @@ RUN curl -o /usr/local/bin/kubectl -LO "https://dl.k8s.io/release/$(curl -L -s h
 #     tar -xz -C /tmp/ && mv /tmp/kubebuilder_2.3.1_$(go env GOOS)_$(go env GOARCH) /usr/local/kubebuilder
 
 RUN curl -L https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH) | \
-     tar -xz -C /tmp/ && mv /tmp/kubebuilder && mv kubebuilder /usr/local/kubebuilder
+     tar -xz -C /tmp/ && mv /tmp/kubebuilder /usr/local/kubebuilder
 
 RUN apt-get install redis-server -y
 RUN go get github.com/mattn/goreman
